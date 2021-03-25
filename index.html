@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+    <script src="https://aframe.io/releases/1.0.0/aframe.min.js"></script>
+    <!-- we import arjs version without NFT but with marker + location based support -->
+    <script src="https://raw.githack.com/AR-js-org/AR.js/master/aframe/build/aframe-ar.js"></script>
+    <body style="margin : 0px; overflow: hidden;">
+        <a-scene embedded arjs>
+        <a-marker preset='hiro'>
+            <a-text
+                rotation='-90 0 0'
+                color='#4287f5'
+                width=10
+                value="EMCO Milling Machine"></a-text>
+
+            <a-entity
+                rotation="0 -90 60"
+                position = "0 0 0"
+                scale = "1 1 1"
+                obj-model="obj: url(model/Part2.obj); mtl: url(model/Part2.mtl)">
+            </a-entity>
+        </a-marker>
+        <a-entity camera></a-entity>
+        </a-scene>
+    </body>
+</html>
