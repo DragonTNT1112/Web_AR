@@ -1,5 +1,8 @@
 <!DOCTYPE html>
 <html>
+    <head>
+        <title>LISMS CNC Lathe Machine</title>
+      </head>
     <script src="https://aframe.io/releases/1.0.0/aframe.min.js"></script>
     <!-- we import arjs version without NFT but with marker + location based support -->
     <script src="https://raw.githack.com/AR-js-org/AR.js/master/aframe/build/aframe-ar.js"></script>
@@ -7,17 +10,84 @@
         <a-scene embedded arjs>
         <a-marker preset='hiro'>
             <a-text
+                position='-2 0.5 -2'
+                rotation='-60 0 0'
+                color='#0042a6'
+                width=10s
+                font='exo2bold'
+                value="EMCO CNC Milling Machine"></a-text>
+
+            <a-text
+                position='0.75 0 0.25'
                 rotation='-90 0 0'
-                color='#4287f5'
-                width=10
-                value="EMCO Milling Machine"></a-text>
+                color='#00ff00'
+                width=8s
+                font='exo2bold'
+                value="Current Work"></a-text>
+
+            <a-text
+                position='-1.5 -0.75 1'
+                rotation='-93 0 0'
+                color='#ff0000'
+                width=5s
+                font='exo2bold'
+                value="X offset: 211.87"></a-text>
+
+            <a-text
+                position='-1.5 -0.75 1.25'
+                rotation='-93 0 0'
+                color='#00ff00'
+                width=5s
+                font='exo2bold'
+                value="Y offset: 151.20"></a-text>
+
+            <a-text
+                position='-1.5 -0.75 1.5'
+                rotation='-93 0 0'
+                color='#0000ff'
+                width=5s
+                font='exo2bold'
+                value="Z offset: 142.63"></a-text>
+
+            <a-text
+                position='-1.5 -0.75 1.75'
+                rotation='-93 0 0'
+                width=5s
+                font='exo2bold'
+                value="Cutting Tool: 5mm DRILL"></a-text>
+
+            <a-text
+                position='1.5 -0.75 1'
+                rotation='-93 0 0'
+                width=5s
+                font='exo2bold'
+                value="Time: 32mins"></a-text>
 
             <a-entity
-                rotation="0 -90 60"
-                position = "0 0 0"
-                scale = "20 20 20"
+                rotation="0 -90 0"
+                position = "2 0 -0.75"
+                scale = "10 10 10"
                 obj-model="obj: url(https://dragontnt1112.github.io/Web_AR/model/Part2.obj); mtl: url(https://dragontnt1112.github.io/Web_AR/model/Part2.mtl)">
             </a-entity>
+            
+
+            <a-text
+                position='2.8 -1 4'
+                rotation='-60 0 0'
+                color='#ff0000'
+                width=8s
+                font='exo2bold'
+                value="STOP!">
+            </a-text>
+
+            <a-torus
+                position='3 -1 4.5'
+                color="#ff0000"
+                rotation='-60 0 0'
+                radius="0.25" 
+                radius-tubular="0.04">
+            </a-torus>
+
         </a-marker>
         <a-entity camera></a-entity>
         </a-scene>
